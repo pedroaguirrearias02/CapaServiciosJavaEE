@@ -5,11 +5,17 @@
  */
 package co.edu.uptc.sw2.entidades;
 
+import javax.persistence.Id;
+
 /**
  *
  * @author PEDRO
  */
 public class Facultad {
+    
+      private String nombre;
+      @Id
+      private long id;
 
     public Facultad(String nombre) {
         this.nombre = nombre;
@@ -29,6 +35,12 @@ public class Facultad {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    
-    private String nombre;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 }

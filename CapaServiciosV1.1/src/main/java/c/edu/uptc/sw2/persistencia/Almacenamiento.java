@@ -14,7 +14,6 @@ import co.edu.uptc.sw2.entidades.Matricula;
 import co.edu.uptc.sw2.entidades.Municipio;
 import co.edu.uptc.sw2.entidades.Profesor;
 import java.util.ArrayList;
-import java.util.Date;
 
 /**
  *
@@ -43,13 +42,21 @@ public class Almacenamiento {
         this.listHorarios = new ArrayList<>();
         
         listFacultads.add(new Facultad("Ingenieria"));
+        listFacultads.add(new Facultad("Medicina"));
+        listFacultads.add(new Facultad("Derecho"));
+        listFacultads.add(new Facultad("Ciencias Basicas"));
+        listFacultads.add(new Facultad("Artes"));
         listCarreras.add(new Carrera("Ingenieria de Sistemas", listFacultads.get(0)));
         listEstudiantes.add(new Estudiante("Daniela", "Torres", "2015", "1233", null, null, null));
-        
-        
     }
 
-    
+    public void eleminarFacultad(Facultad facultad){
+        for (Facultad facultad1 : listFacultads) {
+            if (facultad1.getNombre().equals(facultad.getNombre())) {
+                listFacultads.remove(facultad1);
+            }
+        }
+    }
 
     /**
      * @return the listCarreras

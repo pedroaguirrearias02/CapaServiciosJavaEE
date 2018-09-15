@@ -44,6 +44,8 @@ module.controller('EstudianteCtrl', ['$scope', '$filter', '$http', function ($sc
             }
             $scope.panelEditar = false;
         };
+        
+        
         $scope.cancelar = function () {
             $scope.panelEditar = false;
             $scope.datosFormulario = {};
